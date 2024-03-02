@@ -1,0 +1,100 @@
+body {
+  margin: 0;
+  padding: 0;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  min-height: 100vh;
+}
+
+.adminannouncepanel {
+  position: relative;
+  width: 610px;
+  height: 200px;
+  margin-top: 20px;
+  border-radius: 29px;
+  background-color: transparent;
+  border: 1px solid rgba(0, 255, 148, 0.13);
+  box-sizing: border-box;
+  overflow: hidden;
+  font-size: 20px;
+  color: #00ffc2;
+  font-family: var(--font-julius-sans-one);
+  background: linear-gradient(
+    179.39deg,
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 255, 148, 0) 93.19%
+  ),
+  rgba(0, 38, 29, 0.66);
+}
+
+.background {
+  width: 610px;
+  height: 310px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.topgreybar {
+  width: 580px;
+  height: 126px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: rgba(129, 129, 129, 0.2);
+  border: 1px solid rgba(3, 108, 83, 0.57);
+}
+
+.admin-announcement,
+.demo-message-to {
+  left: 50%;
+  transform: translateX(-50%);
+}
+:root {
+  --font-turret-road: "Turret Road";
+  --font-julius-sans-one: "Julius Sans One";
+}
+.admin-announcement {
+  position: absolute;
+  top: 25px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: block;
+  width: auto;
+  white-space: nowrap;
+  font-size: 30px;
+  color: #00ffc2;
+  font-family: var(--font-julius-sans-one);
+}
+
+.hidden {
+  display: none !important;
+}
+.adminannouncepanel-child,
+.demo-message-to {
+  position: absolute;
+  top: 128px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 692px;
+  height: 222px;
+  font-size: 30px;
+  color: #fff;
+  text-align: center;
+}
+
+.demo-message-to {
+  position: absolute;
+  top: 70px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 90%;
+  max-width: 450px;
+  padding: 10px;
+  box-sizing: border-box;
+  font-size: 29px;
+  font-family: var(--font-turret-road);
+  color: #fff;
+  text-align: center;
+  white-space: normal;
+  overflow-wrap: break-word;
+}

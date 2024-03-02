@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Julius+Sans+One:wght@400&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Turret+Road:wght@400&display=swap">
+</head>
+<body>
+
+<div class="adminannouncepanel hidden"> 
+    <div class="background"></div>
+    <div class="topgreybar"></div>
+    <div class="admin-announcement">Admin Announcement</div>
+    <div class="adminannouncepanel-child"></div>
+    <div class="demo-message-to">
+        Demo message to show what would be shown if an admin was to make an announcement via in game chat
+    </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+<script>
+    $(document).ready(function() {
+        window.addEventListener('message', function(event) {
+            var item = event.data;
+    
+            if (item.type === "adminAnnounce") {
+                $(".demo-message-to").text(item.message);
+                $(".adminannouncepanel").removeClass("hidden").fadeIn("fast");
+                
+
+                setTimeout(function() {
+                    $(".adminannouncepanel").fadeOut("fast", function() {
+                        $(this).addClass("hidden");
+                    });
+                }, 10000); 
+            }
+        });
+    });
+</script>
+    
+<script src="js/main.js"></script>
+</body>
+</html>
